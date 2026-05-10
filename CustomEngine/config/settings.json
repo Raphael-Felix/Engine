@@ -1,0 +1,32 @@
+{
+    "projects": {
+        "3C7D3669-59CB-1FE6-51C3-30D1722A1D46": {
+            "config-debug": {
+                "additionalDependencies": [],
+                "additionalIncludeDirectories": [],
+                "additionalLibraryDirectories": [],
+                "preprocessorDefinitions": []
+            },
+            "config-release": {
+                "additionalDependencies": [],
+                "additionalIncludeDirectories": [],
+                "additionalLibraryDirectories": [],
+                "preprocessorDefinitions": []
+            },
+            "dependencies": [],
+            "dependents": [],
+            "name": "Engine",
+            "property-lib": false,
+            "property-pch": false,
+            "property-vcpkg": false,
+            "property-window": false
+        }
+    },
+    "projects_name_to_guid": {
+        "Engine": "3C7D3669-59CB-1FE6-51C3-30D1722A1D46"
+    },
+    "solution_guid": "1F8105B5-7266-741A-6698-7B7C3E255EE0",
+    "solution_name": "CustomEngine",
+    "startup_project": "",
+    "version": "2.0"
+}
