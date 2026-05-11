@@ -1,29 +1,119 @@
 {
     "projects": {
-        "1AC65F53-581D-6CA3-7BD5-4B9E79121B7B": {
+      "1AC65F53-581D-6CA3-7BD5-4B9E79121B7B": {
             "config-debug": {
-                "additionalDependencies": [],
-                "additionalIncludeDirectories": [],
-                "additionalLibraryDirectories": [],
-                "preprocessorDefinitions": []
+              "additionalDependencies": [
+                "sfml-graphics-s-d.lib",
+                "sfml-window-s-d.lib",
+                "sfml-system-s-d.lib",
+                "sfml-audio-s-d.lib",
+                "opengl32.lib",
+                "freetype.lib",
+                "winmm.lib",
+                "gdi32.lib",
+                "glu32.lib",
+                "dwmapi.lib",
+                "flac.lib",
+                "vorbisenc.lib",
+                "vorbisfile.lib",
+                "vorbis.lib",
+                "ogg.lib"
+              ],
+              "additionalIncludeDirectories": [ "../../lib/SFML-3.1.0/include" ],
+              "additionalLibraryDirectories": [ "../../lib/SFML-3.1.0/lib" ],
+              "preprocessorDefinitions": [ "SFML_STATIC" ]
             },
             "config-release": {
-                "additionalDependencies": [],
-                "additionalIncludeDirectories": [],
-                "additionalLibraryDirectories": [],
-                "preprocessorDefinitions": []
+              "additionalDependencies": [
+                "sfml-graphics-s.lib",
+                "sfml-window-s.lib",
+                "sfml-system-s.lib",
+                "sfml-audio-s.lib",
+                "opengl32.lib",
+                "freetype.lib",
+                "winmm.lib",
+                "gdi32.lib",
+                "glu32.lib",
+                "dwmapi.lib",
+                "flac.lib",
+                "vorbisenc.lib",
+                "vorbisfile.lib",
+                "vorbis.lib",
+                "ogg.lib"
+              ],
+              "additionalIncludeDirectories": [ "../../lib/SFML-3.1.0/include" ],
+              "additionalLibraryDirectories": [ "../../lib/SFML-3.1.0/lib" ],
+              "preprocessorDefinitions": [ "SFML_STATIC" ]
             },
             "dependencies": [],
-            "dependents": [],
+            "dependents": [
+              "275C0D0F-5C0F-2273-5A0A-642D7F7B5B1F"
+            ],
             "name": "CustomEngine",
             "property-lib": true,
             "property-pch": false,
             "property-vcpkg": false,
             "property-window": false
-        }
+          },
+      "275C0D0F-5C0F-2273-5A0A-642D7F7B5B1F": {
+            "config-debug": {
+              "additionalDependencies": [
+                "sfml-graphics-s-d.lib",
+                "sfml-window-s-d.lib",
+                "sfml-system-s-d.lib",
+                "sfml-audio-s-d.lib",
+                "opengl32.lib",
+                "freetype.lib",
+                "winmm.lib",
+                "gdi32.lib",
+                "glu32.lib",
+                "dwmapi.lib",
+                "flac.lib",
+                "vorbisenc.lib",
+                "vorbisfile.lib",
+                "vorbis.lib",
+                "ogg.lib"
+              ],
+              "additionalIncludeDirectories": [ "../../lib/SFML-3.1.0/include" ],
+              "additionalLibraryDirectories": [ "../../lib/SFML-3.1.0/lib" ],
+              "preprocessorDefinitions": [ "SFML_STATIC" ]
+            },
+            "config-release": {
+              "additionalDependencies": [
+                "sfml-graphics-s.lib",
+                "sfml-window-s.lib",
+                "sfml-system-s.lib",
+                "sfml-audio-s.lib",
+                "opengl32.lib",
+                "freetype.lib",
+                "winmm.lib",
+                "gdi32.lib",
+                "glu32.lib",
+                "dwmapi.lib",
+                "flac.lib",
+                "vorbisenc.lib",
+                "vorbisfile.lib",
+                "vorbis.lib",
+                "ogg.lib"
+              ],
+              "additionalIncludeDirectories": [ "../../lib/SFML-3.1.0/include" ],
+              "additionalLibraryDirectories": [ "../../lib/SFML-3.1.0/lib" ],
+              "preprocessorDefinitions": [ "SFML_STATIC" ]
+            },
+            "dependencies": [
+              "1AC65F53-581D-6CA3-7BD5-4B9E79121B7B"
+            ],
+            "dependents": [],
+            "name": "Sample",
+            "property-lib": false,
+            "property-pch": false,
+            "property-vcpkg": false,
+            "property-window": false
+          }
     },
     "projects_name_to_guid": {
-        "CustomEngine": "1AC65F53-581D-6CA3-7BD5-4B9E79121B7B"
+        "CustomEngine": "1AC65F53-581D-6CA3-7BD5-4B9E79121B7B",
+        "Sample": "275C0D0F-5C0F-2273-5A0A-642D7F7B5B1F"
     },
     "solution_guid": "25312B72-0522-36E8-1885-34956C9E7303",
     "solution_name": "Engine",
