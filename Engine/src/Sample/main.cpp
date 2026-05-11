@@ -6,7 +6,7 @@
 
 int main()
 {
-    GameManager::Get()->CreateWindow(640, 640);
+    GameManager::Get()->CreateWindow(1560, 840, "Sample");
 
     GameManager::Get()->LaunchScene();
 }
