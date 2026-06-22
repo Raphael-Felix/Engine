@@ -8,5 +8,5 @@ int main()
 {
     GameManager::Get()->CreateWindow(1560, 840, "Sample");
 
-    GameManager::Get()->LaunchScene();
+    GameManager::Get()->LaunchScene<Scene>();
 }

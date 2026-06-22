@@ -25,7 +25,10 @@ public:
 	void CreateWindow(unsigned int width, unsigned int height, std::string title = "Game", sf::Color color = sf::Color::Black);
 
 	template <typename T>
-	void LaunchScene();
+	void LaunchScene()
+	{
+		static_assert(std::is_base_of<Scene, T>(), "T must be derived from Scene");
+	}
 
 	void Update();
 };
