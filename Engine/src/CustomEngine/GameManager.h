@@ -28,8 +28,12 @@ public:
 	void LaunchScene()
 	{
 		static_assert(std::is_base_of<Scene, T>(), "T must be derived from Scene");
+
+		m_currentScene = new T;
+		m_scenes.push_back(m_currentScene);
+
+		Run();
 	}
 
-	void Update();
+	void Run();
 };
-

@@ -18,9 +18,12 @@ public:
 	virtual void OnEnterScene() = 0;
 	virtual void OnExitScene() = 0;
 
-	void Update();
-	virtual void OnUpdate() = 0;
+	void Update(float dt);
+	virtual void OnUpdate(float dt) = 0;
 
-	void Event(sf::Event& event);
-	virtual void OnEvent() = 0;
+	void Event(const sf::Event& event);
+	virtual void OnEvent(const sf::Event& event) = 0;
+
+	void Draw();
+	virtual void OnDraw() = 0;
 };

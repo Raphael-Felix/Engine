@@ -7,6 +7,8 @@ GameManager::GameManager()
 {
     m_instance = nullptr;
     m_window = nullptr;
+
+    m_currentScene = nullptr;
 }
 
 GameManager* GameManager::Get()
@@ -22,12 +24,25 @@ void GameManager::CreateWindow(unsigned int width, unsigned int height, std::str
     m_window = new sf::RenderWindow(sf::VideoMode(sf::Vector2u( width, height )), title);
 }
 
-void GameManager::Update()
+void GameManager::Run()
 {
     while (m_window->isOpen())
     {
-        m_currentScene->Update();
+        float dt = 0;
 
-       // m_currentScene->Event(m_window->pollEvent());
+        m_currentScene->Update(dt);
+
+        if (const auto event = m_window->pollEvent())
+        {
+            if ((*event).is<sf::Event::Closed>())
+            {
+                m_window->close();
+            }
+
+            m_currentScene->Event(*event);
+        }
+
+        m_window->clear();
+        m_currentScene->Draw();
     }
 }

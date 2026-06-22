@@ -1,4 +1,5 @@
 #include "Scene.h"
+#include "Entity.h"
 
 void Scene::EnterScene()
 {
@@ -10,12 +11,27 @@ void Scene::ExitScene()
 	OnExitScene();
 }
 
-void Scene::Update()
+void Scene::Update(float dt)
 {
-	OnUpdate();
+	for (auto& const entity : m_entities)
+	{
+		entity->Update(dt);
+	}
+
+	OnUpdate(dt);
 }
 
-void Scene::Event(sf::Event& event)
+void Scene::Event(const sf::Event& event)
 {
-	OnEvent();
+	OnEvent(event);
+}
+
+void Scene::Draw()
+{
+	for (auto& const entity : m_entities)
+	{
+		entity->Draw();
+	}
+
+	OnDraw();
 }
