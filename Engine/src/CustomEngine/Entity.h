@@ -12,42 +12,28 @@ private:
 public:
 	std::vector<Component*> GetComponents() { return m_components; }
 
-	template <typename T>
-	void AddComponent()
+	Component* GetComponentOfType(Component::Type type);
+
+	Component* CreateComponentOfType(Component::Type type);
+
+	void AddComponent(Component::Type type)
 	{
-		static_assert(std::is_base_of<Component, T>(), "T must be derived of Component");
+		if (GetComponentOfType(type) != nullptr)
+			return;
 
-		for (const auto& component : m_components)
-		{
-			if (dynamic_cast<T> (component))
-			{
-				return;
-			}
-		}
-
-		m_components.push_back(new T);
+		m_components.push_back(new Component);
 	}
 
 	void EraseComponent(Component::Type type)
 	{
-		for (const auto& component : m_components)
-		{
-			if (component->type() == type)
-			{
+		if (Component* component = GetComponentOfType(type))
 				delete component;
-			}
-		}
 	}
 
 	void ActivateComponent(Component::Type type, bool activate = true)
 	{
-		for (const auto& component : m_components)
-		{
-			if (component->type() == type)
-			{
-				component->Activate(activate);
-			}
-		}
+		if (Component* component = GetComponentOfType(type))
+			component->Activate(activate);
 	}
 
 	void Update(float dt);

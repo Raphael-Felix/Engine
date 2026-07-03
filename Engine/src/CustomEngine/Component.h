@@ -6,7 +6,7 @@ public:
 	{
 		Unknow,
 		Transform,
-		Draw,
+		Sprite,
 		Animation,
 		Collider,
 		Physic
